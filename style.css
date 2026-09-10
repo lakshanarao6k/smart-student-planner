@@ -1,0 +1,1296 @@
+/* =========================================
+   SMART STUDENT PLANNER
+   MODERN NAVY + CREAM DESIGN
+   ========================================= */
+
+
+/* =========================================
+   COLORS
+   ========================================= */
+
+:root {
+
+    --navy: #17324d;
+
+    --navy-light: #2d5273;
+
+    --blue-soft: #e8f0f6;
+
+    --cream: #f7f3ec;
+
+    --white: #ffffff;
+
+    --text: #263746;
+
+    --muted: #74818c;
+
+    --border: #e1ddd5;
+
+    --success: #4f8068;
+
+    --shadow:
+        0 8px 25px rgba(23, 50, 77, 0.08);
+
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    padding-bottom: 90px;
+
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
+
+    color: white;
+
+    padding: 25px 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.header-content {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+.app-label {
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    opacity: 0.75;
+
+    margin-bottom: 7px;
+
+}
+
+
+.header h1 {
+
+    font-size: 25px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.header-subtitle {
+
+    font-size: 14px;
+
+    opacity: 0.85;
+
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 25px 20px;
+
+}
+
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+.app-section {
+
+    animation:
+        fadeIn 0.25s ease;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(6px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   WELCOME
+   ========================================= */
+
+.welcome {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--white),
+            var(--blue-soft)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.small-label {
+
+    color: var(--navy-light);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.welcome h2 {
+
+    color: var(--navy);
+
+    font-size: 23px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.welcome p {
+
+    color: var(--muted);
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   PAGE HEADING
+   ========================================= */
+
+.page-heading {
+
+    margin-bottom: 20px;
+
+}
+
+
+.page-heading h2 {
+
+    color: var(--navy);
+
+    font-size: 25px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.page-heading p {
+
+    color: var(--muted);
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   DASHBOARD
+   ========================================= */
+
+.dashboard {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.dashboard-card {
+
+    min-height: 125px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.dashboard-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(23, 50, 77, 0.12);
+
+}
+
+
+.dashboard-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    min-width: 48px;
+
+    border-radius: 14px;
+
+    background: var(--blue-soft);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+}
+
+
+.card-label {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.dashboard-card h3 {
+
+    color: var(--navy);
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.card {
+
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.card h3 {
+
+    color: var(--navy);
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================================
+   SECTION TITLE
+   ========================================= */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-title h2 {
+
+    color: var(--navy);
+
+    font-size: 20px;
+
+}
+
+
+.section-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 12px;
+
+    background: var(--blue-soft);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+
+}
+
+
+/* =========================================
+   TODAY'S PLAN
+   ========================================= */
+
+.today {
+
+    min-height: 160px;
+
+}
+
+
+.today-plan {
+
+    width: 100%;
+
+}
+
+
+.today-item {
+
+    background: var(--blue-soft);
+
+    border-radius: 12px;
+
+    padding: 13px;
+
+    margin-top: 10px;
+
+}
+
+
+.today-item h4 {
+
+    color: var(--navy);
+
+    margin-bottom: 5px;
+
+}
+
+
+.today-item p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 4px 0;
+
+}
+
+
+/* =========================================
+   QUICK OVERVIEW
+   ========================================= */
+
+.overview-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.overview-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    background: var(--cream);
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+}
+
+
+.overview-item > span {
+
+    font-size: 20px;
+
+}
+
+
+.overview-item strong {
+
+    color: var(--navy);
+
+    font-size: 14px;
+
+}
+
+
+.overview-item p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================================
+   UPCOMING EXAMS
+   ========================================= */
+
+.dashboard-exam-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: var(--blue-soft);
+
+    border-radius: 12px;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+}
+
+
+.dashboard-exam-item h4 {
+
+    color: var(--navy);
+
+    margin-bottom: 5px;
+
+}
+
+
+.dashboard-exam-item p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.exam-date-box {
+
+    background: var(--navy);
+
+    color: white;
+
+    border-radius: 10px;
+
+    padding: 8px 10px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    min-width: 75px;
+
+}
+
+
+/* =========================================
+   FORMS
+   ========================================= */
+
+.assignment-form,
+.timetable-form,
+.study-form,
+.exam-form,
+.task-form,
+.reminder-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    outline: none;
+
+}
+
+
+input:focus,
+select:focus {
+
+    border-color:
+        var(--navy-light);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(45, 82, 115, 0.08);
+
+}
+
+
+label {
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+button {
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 12px 16px;
+
+    background: var(--navy);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-top: 5px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+button:hover {
+
+    background:
+        var(--navy-light);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================
+   EMPTY MESSAGE
+   ========================================= */
+
+.empty-message {
+
+    color: var(--muted);
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   ASSIGNMENTS
+   ========================================= */
+
+.assignment-item {
+
+    background: var(--cream);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 15px;
+
+    margin-top: 12px;
+
+}
+
+
+.assignment-item h3 {
+
+    color: var(--navy);
+
+    margin-bottom: 8px;
+
+}
+
+
+.assignment-item p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 6px 0;
+
+}
+
+
+.assignment-item button {
+
+    margin-right: 7px;
+
+}
+
+
+/* =========================================
+   TIMETABLE
+   ========================================= */
+
+.timetable-item {
+
+    background: var(--cream);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 15px;
+
+    margin-top: 12px;
+
+}
+
+
+.timetable-item h4 {
+
+    color: var(--navy);
+
+    margin-bottom: 8px;
+
+}
+
+
+.timetable-item p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* =========================================
+   STUDY
+   ========================================= */
+
+.study-item {
+
+    background: var(--cream);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 15px;
+
+    margin-top: 12px;
+
+}
+
+
+.study-item h4 {
+
+    color: var(--navy);
+
+    margin-bottom: 8px;
+
+}
+
+
+.study-item p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 6px 0;
+
+}
+
+
+/* =========================================
+   EXAMS
+   ========================================= */
+
+.exam-item {
+
+    background: var(--cream);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 15px;
+
+    margin-top: 12px;
+
+}
+
+
+.exam-item h4 {
+
+    color: var(--navy);
+
+    margin-bottom: 8px;
+
+}
+
+
+.exam-item p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 6px 0;
+
+}
+
+
+/* =========================================
+   TASKS
+   ========================================= */
+
+.task-item {
+
+    background: var(--cream);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 15px;
+
+    margin-top: 12px;
+
+}
+
+
+.task-item h4 {
+
+    color: var(--navy);
+
+    margin-bottom: 8px;
+
+}
+
+
+.task-item p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 6px 0;
+
+}
+
+
+.task-item button {
+
+    margin-right: 7px;
+
+}
+
+
+/* =========================================
+   REMINDERS
+   ========================================= */
+
+.reminder-item {
+
+    background: var(--cream);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 15px;
+
+    margin-top: 12px;
+
+}
+
+
+.reminder-item h4 {
+
+    color: var(--navy);
+
+    margin-bottom: 8px;
+
+}
+
+
+.reminder-item p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin: 6px 0;
+
+}
+
+
+/* =========================================
+   PROGRESS
+   ========================================= */
+
+.progress-card {
+
+    text-align: center;
+
+}
+
+
+.progress-circle {
+
+    width: 155px;
+
+    height: 155px;
+
+    margin: 22px auto;
+
+    border-radius: 50%;
+
+    border:
+        12px solid var(--blue-soft);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--white);
+
+}
+
+
+.progress-circle span {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: var(--navy);
+
+}
+
+
+.progress-card p {
+
+    color: var(--muted);
+
+    line-height: 1.5;
+
+}
+
+
+#completed-summary,
+#pending-summary {
+
+    margin-top: 12px;
+
+    color: var(--text);
+
+}
+
+
+/* =========================================
+   BOTTOM NAVIGATION
+   ========================================= */
+
+.bottom-nav {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.97
+    );
+
+    border-top:
+        1px solid var(--border);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 -6px 20px
+        rgba(23, 50, 77, 0.08);
+
+    overflow-x: auto;
+
+}
+
+
+.bottom-nav a {
+
+    min-width: 82px;
+
+    padding: 9px 7px;
+
+    text-decoration: none;
+
+    color: var(--muted);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 11px;
+
+    transition:
+        color 0.2s ease;
+
+}
+
+
+.bottom-nav a .nav-icon {
+
+    font-size: 19px;
+
+}
+
+
+.bottom-nav a span:last-child {
+
+    font-size: 10px;
+
+}
+
+
+.bottom-nav a.active {
+
+    color: var(--navy);
+
+    font-weight: bold;
+
+}
+
+
+.bottom-nav a.active .nav-icon {
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+
+    main {
+
+        padding:
+            18px 14px;
+
+    }
+
+
+    .header {
+
+        padding:
+            22px 16px;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 21px;
+
+    }
+
+
+    .welcome {
+
+        padding: 20px;
+
+    }
+
+
+    .welcome h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .dashboard {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+
+    .dashboard-card {
+
+        min-height: 105px;
+
+        padding: 14px;
+
+        gap: 10px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+    }
+
+
+    .dashboard-icon {
+
+        width: 40px;
+
+        height: 40px;
+
+        min-width: 40px;
+
+        font-size: 18px;
+
+    }
+
+
+    .dashboard-card h3 {
+
+        font-size: 14px;
+
+    }
+
+
+    .overview-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .bottom-nav {
+
+        justify-content:
+            flex-start;
+
+    }
+
+
+    .bottom-nav a {
+
+        min-width: 76px;
+
+    }
+
+
+    .card {
+
+        padding: 17px;
+
+        border-radius: 15px;
+
+    }
+
+
+}
